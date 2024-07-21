@@ -1,8 +1,15 @@
 /* _mainPage.scss */
 
+/* 히어로 섹션 슬라이더 */
+
 #secHero {
     position: relative;
-    height: 110vh;
+    height: 75vh;
+}
+
+#sliderHero {
+    position: relative;
+    height: inherit;
 
     &::after {
         display: block;
@@ -11,17 +18,9 @@
         margin-block-start: auto;
         height: 45vh;
         background-image: linear-gradient(to top, rgb(var(--clr-background)), transparent);
+        pointer-events: none;
         content: '';
     }
-}
-
-#secHotItems {
-    height: 300vh;
-}
-
-#sliderHero {
-    position: relative;
-    height: inherit;
 }
 
 #slideWrapper {
@@ -30,42 +29,50 @@
 
 .slide-image {
     width: 100%;
-    height: 110vh;
+    height: 75vh;
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
 }
 
 .slide-item {
     position: relative;
-    pointer-events: none;
-    user-select: none;
 }
 
 .slide-overlay {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
     position: absolute;
     inset: 0;
-
-    &.description {
-        &-left {
-            justify-content: flex-start;
-        }
-
-        &-right {
-            justify-content: flex-end;
-        }
-    }
+    z-index: 1;
 }
 
 .slide-description {
-    width: max(50%, 14rem);
+    position: absolute;
+    inset: 0;
+    margin-block-start: auto;
+    width: max(35vw, 16rem);
+    height: fit-content;
+}
+
+.slide-title {
+
 }
 
 .slide-explanation {
     margin-block: 1rem;
-    padding: 2rem;
-    border-radius: 1rem;
-    background-image: linear-gradient(135deg, rgb(0 0 0 / .75) 0%, transparent 50%);
+    font-size: var(--fnt-title-md);
+    font-weight: 700;
+}
+
+.slide-external-link {
+    padding: 1rem;
+    background-color: rgb(var(--clr-theme));
+    cursor: pointer;
+}
+
+/* 히어로 섹션 슬라이더 끝 */
+
+#secHotItems {
+    height: 300vh;
 }
 
 /* _mainPage.scss */
