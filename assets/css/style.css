@@ -410,10 +410,10 @@ a:hover, a:focus, a:active {
 /* _utils.scss */
 /* _defaultColor.scss */
 :root {
-  --clr-min: 255 255 255;
-  --clr-max: 0 0 0;
-  --clr-theme: 0 224 176;
-  --clr-background: 235 235 235;
+  --clr-min: 0 0 0;
+  --clr-max: 255 255 255;
+  --clr-theme: 18 110 214;
+  --clr-background: 14 18 53;
   --clr-surface-100: ;
   --clr-surface-75: ;
   --clr-surface-50: ;
@@ -426,7 +426,7 @@ a:hover, a:focus, a:active {
   --clr-tint-25: ;
   --clr-tint-10: ;
   --clr-tint-5: ;
-  --clr-text: 39 39 39;
+  --clr-text: 255 255 255;
   --clr-text-highlight: 255 255 255;
   --clr-text-on-tint: 255 255 255;
   --clr-text-on-surface: ;
@@ -462,8 +462,40 @@ a:hover, a:focus, a:active {
 
 /* _commons.scss */
 /* _headers.scss */
+#headPrimary {
+  position: absolute;
+  inset: 0;
+  margin-block-end: auto;
+  height: 4rem;
+  outline: 0.5px solid rgb(var(--clr-max)/0.2);
+  background: linear-gradient(to top, rgb(var(--clr-max)/0.1), transparent), url("/miscellaneous/noise-filter.svg");
+  -webkit-backdrop-filter: blur(0.2rem);
+          backdrop-filter: blur(0.2rem);
+}
+#headPrimary > .inner-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#navPrimary {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline-start: auto;
+}
+
+#navListFull {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* _headers.scss */
 /* _mainPage.scss */
+#secHero {
+  height: 300vh;
+}
+
 /* _mainPage.scss */
 /* _subPages.scss */
 /* _subPages.scss */

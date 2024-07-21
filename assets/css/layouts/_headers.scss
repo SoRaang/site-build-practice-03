@@ -1,7 +1,37 @@
 /* _headers.scss */
 
 #headPrimary { // 메인 헤더
+    position: absolute;
+    inset: 0;
+    margin-block-end: auto;
+    height: 4rem;
+    outline: .5px solid rgb(var(--clr-max) / .2);
+    background:
+        linear-gradient(to top, rgb(var(--clr-max) / .1), transparent),
+        url('/miscellaneous/noise-filter.svg');
+    backdrop-filter: blur(.2rem);
+
+    > .inner-wrapper {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+#logoPrimary {
 
 }
+
+#navPrimary {
+    width: fit-content;
+    margin-inline-start: auto;
+}
+
+#navListFull {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 
 /* _headers.scss */
