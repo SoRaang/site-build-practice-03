@@ -410,23 +410,23 @@ a:hover, a:focus, a:active {
 /* _utils.scss */
 /* _defaultColor.scss */
 :root {
-  --clr-min: 0 0 0;
-  --clr-max: 255 255 255;
-  --clr-theme: 186 12 47;
-  --clr-background: 11 12 16;
+  --clr-min: 255 255 255;
+  --clr-max: 0 0 0;
+  --clr-theme: 0 224 176;
+  --clr-background: 235 235 235;
   --clr-surface-100: ;
   --clr-surface-75: ;
   --clr-surface-50: ;
   --clr-surface-25: ;
   --clr-surface-10: ;
   --clr-surface-5: ;
-  --clr-tint-100: 0 32 91;
+  --clr-tint-100: ;
   --clr-tint-75: ;
   --clr-tint-50: ;
   --clr-tint-25: ;
   --clr-tint-10: ;
   --clr-tint-5: ;
-  --clr-text: 255 255 255;
+  --clr-text: 39 39 39;
   --clr-text-highlight: 255 255 255;
   --clr-text-on-tint: 255 255 255;
   --clr-text-on-surface: ;
