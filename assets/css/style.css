@@ -468,9 +468,10 @@ a:hover, a:focus, a:active {
   margin-block-end: auto;
   height: 4rem;
   outline: 0.5px solid rgb(var(--clr-max)/0.2);
-  background: linear-gradient(to top, rgb(var(--clr-max)/0.1), transparent), url("/miscellaneous/noise-filter.svg");
+  background-image: linear-gradient(to top, rgb(var(--clr-max)/0.1), transparent);
   -webkit-backdrop-filter: blur(0.2rem);
           backdrop-filter: blur(0.2rem);
+  z-index: 50000;
 }
 #headPrimary > .inner-wrapper {
   display: flex;
@@ -493,6 +494,19 @@ a:hover, a:focus, a:active {
 /* _headers.scss */
 /* _mainPage.scss */
 #secHero {
+  position: relative;
+}
+#secHero::after {
+  display: block;
+  position: absolute;
+  inset: 0;
+  margin-block-start: auto;
+  height: 45vh;
+  background-image: linear-gradient(to top, rgb(var(--clr-background)), transparent);
+  content: "";
+}
+
+#secHotItems {
   height: 300vh;
 }
 
